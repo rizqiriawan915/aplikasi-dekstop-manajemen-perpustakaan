@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8271FCD3-37F9-4180-83A0-F4A519E380FA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Manajemen_Perpustakaan</RootNamespace>
+    <AssemblyName>Manajemen Perpustakaan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lihatDaftarBuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lihatDaftarBuku.Designer.cs">
+      <DependentUpon>lihatDaftarBuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manajemenAnggota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manajemenAnggota.Designer.cs">
+      <DependentUpon>manajemenAnggota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manajemenBuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manajemenBuku.Designer.cs">
+      <DependentUpon>manajemenBuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="peminjamanBuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="peminjamanBuku.Designer.cs">
+      <DependentUpon>peminjamanBuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pendaftaranPetugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pendaftaranPetugas.Designer.cs">
+      <DependentUpon>pendaftaranPetugas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pengembalianBuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengembalianBuku.Designer.cs">
+      <DependentUpon>pengembalianBuku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="riwayatPerpustakaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="riwayatPerpustakaan.Designer.cs">
+      <DependentUpon>riwayatPerpustakaan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lihatDaftarBuku.resx">
+      <DependentUpon>lihatDaftarBuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manajemenAnggota.resx">
+      <DependentUpon>manajemenAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manajemenBuku.resx">
+      <DependentUpon>manajemenBuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="peminjamanBuku.resx">
+      <DependentUpon>peminjamanBuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pendaftaranPetugas.resx">
+      <DependentUpon>pendaftaranPetugas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengembalianBuku.resx">
+      <DependentUpon>pengembalianBuku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="riwayatPerpustakaan.resx">
+      <DependentUpon>riwayatPerpustakaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_library_shelves_138556_1920x1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-books-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-book-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-return-book-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add book.gif" />
+    <Content Include="Resources\addstudent.gif" />
+    <Content Include="Resources\deash1.jpg" />
+    <Content Include="Resources\giphy.gif" />
+    <None Include="Resources\icons8-add-book-481.png" />
+    <Content Include="Resources\icons8-add-book-96.png" />
+    <Content Include="Resources\icons8-add-user-male-50.png" />
+    <None Include="Resources\icons8-add-user-male-501.png" />
+    <Content Include="Resources\icons8-address-book-100.png" />
+    <None Include="Resources\icons8-address-book-1001.png" />
+    <Content Include="Resources\icons8-book-philosophy-50.png" />
+    <None Include="Resources\icons8-book-philosophy-501.png" />
+    <Content Include="Resources\icons8-bookmark-book-64.png" />
+    <None Include="Resources\icons8-bookmark-book-641.png" />
+    <Content Include="Resources\icons8-exit-sign-50.png" />
+    <None Include="Resources\icons8-exit-sign-501.png" />
+    <Content Include="Resources\icons8-return-book-64.png" />
+    <Content Include="Resources\icons8-student-male-100.png" />
+    <Content Include="Resources\icons8-student-male-1000.png" />
+    <Content Include="Resources\icons8-student-male-50.png" />
+    <None Include="Resources\icons8-student-male-501.png" />
+    <Content Include="Resources\icons8-view-50.png" />
+    <None Include="Resources\icons8-view-502.png" />
+    <Content Include="Resources\image_processing20191025-19942-14gi0n7.gif" />
+    <Content Include="Resources\issueBook.gif" />
+    <Content Include="Resources\motivation1.jpg" />
+    <Content Include="Resources\search.gif" />
+    <Content Include="Resources\search1.gif" />
+    <Content Include="Resources\view book gif.gif" />
+    <Content Include="Resources\view book gif1.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
